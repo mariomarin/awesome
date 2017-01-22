@@ -105,27 +105,17 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
- names  = { 
-         '☭:IRC',
-         '⚡:Luakit', 
-         '♨:Chrome', 
-         '☠:Vim',  
-         '☃:Vbox', 
-         '⌥:Multimedia', 
-         '⌘:Conky',
-         '✇:IDE',
-         '✣:Facepalm',
-           },
+ names  = { '1', '2', '3', '4', '5', '6', '7', '8', '9', },
  layout = {
-      layouts[5],   -- 1:irc
-      layouts[10],  -- 2:luakit
-      layouts[10],  -- 3:chrome
+      layouts[5],   -- 1:xterm
+      layouts[10],  -- 2:firefox
+      layouts[10],  -- 3:chromium
       layouts[12],  -- 4:vim
       layouts[2],   -- 5:vbox
       layouts[10],  -- 6:multimedia
-      layouts[10],  -- 7:conky
-      layouts[2],   -- 8:ide
-      layouts[10],  -- 9:facepalm
+      layouts[10],  -- 7:
+      layouts[2],   -- 8:
+      layouts[10],  -- 9:
           }
        }
   for s = 1, screen.count() do
