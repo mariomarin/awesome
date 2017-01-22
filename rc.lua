@@ -146,15 +146,6 @@ local item = { l, function () wall_load(l) end }
 spacer       = wibox.widget.textbox()
 spacer:set_text(' | ')
 
---Weather Widget
-weather = wibox.widget.textbox()
-vicious.register(weather, vicious.widgets.weather, "Weather: ${city}. Sky: ${sky}. Temp: ${tempc}c Humid: ${humid}%. Wind: ${windkmh} KM/h", 1200, "YMML")
-
---Battery Widget
-batt = wibox.widget.textbox()
-vicious.register(batt, vicious.widgets.bat, "Batt: $2% Rem: $3", 61, "BAT1")
-
-
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 
@@ -261,11 +252,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(spacer)
-    right_layout:add(mailicon)
-    right_layout:add(mailwidget)
-    right_layout:add(spacer)
-    right_layout:add(baticon)
-    right_layout:add(batpct)
+    right_layout:add(myassault)
     right_layout:add(spacer)
     right_layout:add(pacicon)
     right_layout:add(pacwidget)
@@ -297,8 +284,6 @@ for s = 1, screen.count() do
     bottom_layout:add(spacer)
     bottom_layout:add(wifiicon)
     bottom_layout:add(wifi)
-    bottom_layout:add(spacer)
-    bottom_layout:add(weather)
     bottom_layout:add(spacer)
 
  -- Now bring it all together 
