@@ -1,6 +1,5 @@
 --Configure home path so you dont have too
 home_path  = os.getenv('HOME') .. '/'
-
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -11,7 +10,6 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 beautiful.init( awful.util.getdir("config") .. "/themes/default/theme.lua" )
-
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -19,7 +17,7 @@ local menubar = require("menubar")
 require('freedesktop.utils')
 require('freedesktop.menu')
 freedesktop.utils.icon_theme = 'gnome'
---Vicious + Widgets 
+--Vicious + Widgets
 vicious = require("vicious")
 local wi = require("wi")
 
@@ -49,7 +47,8 @@ end
 -- }}}
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt -fg green -bg black"
+--terminal = "urxvt"
+terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
